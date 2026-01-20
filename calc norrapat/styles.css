@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(60, 10, 80, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(10, 60, 80, 0.4) 0%, transparent 40%);
+    overflow: hidden;
+}
+
+.calculator {
+    width: 350px;
+    padding: 25px;
+    border-radius: 30px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    z-index: 10;
+}
+
+
+.calculator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    background: radial-gradient(
+        500px circle at var(--x) var(--y), 
+        hsl(var(--hue), 100%, 70%) 0%, 
+        hsl(var(--hue), 100%, 50%) 20%, 
+        transparent 50%
+    );
+    opacity: 0.6; 
+    transition: opacity 0.5s ease;
+}
+
+
+.display-container {
+    margin-bottom: 25px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    height: 1.5rem;
+}
+
+.current-operand {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 200;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    height: 65px;
+    border: none;
+    border-radius: 20px; 
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05); 
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.1s, background 0.2s, box-shadow 0.2s;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+.number {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.action {
+    color: #ff7675; 
+    font-weight: 600;
+}
+
+.operator {
+    color: #74b9ff; 
+    font-size: 28px;
+}
+
+.equals {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 32px;
+}
+
+.equals:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.span-two {
+    grid-column: span 2;
+}

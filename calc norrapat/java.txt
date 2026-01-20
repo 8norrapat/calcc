@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c1c1e;
+}
+
+.calculator {
+    width: 350px;
+    background: #2c2c2e;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #8e8e93;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    background: #1c1c1e;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #48484a;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 2px #ff9f0a;
+}
+
+.buttons-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn:active {
+    opacity: 0.7;
+}
+
+.orange {
+    background: #ff9f0a;
+    color: #fff;
+}
+
+.gray {
+    background: #636366;
+    color: #fff;
+}
+
+.result-section {
+    background: #1c1c1e;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.result-section label {
+    display: block;
+    color: #8e8e93;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#resultDisplay {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+#clearBtn {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.error {
+    color: #ff453a !important;
+    font-size: 20px !important;
+}
